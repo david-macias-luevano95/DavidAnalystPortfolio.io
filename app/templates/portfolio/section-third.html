@@ -1,0 +1,18 @@
+<div class="center padded">
+    <div class="content">
+        <div class="row vert-pad">
+            <div class="left padded">
+                <h1>You can contact me to learn more about my work</h1>
+                <p>Work hard to learn, contriobute value, and knowledge to a good work environment.</p>
+            </div>    
+            <div id="contacto" class="right padded">
+                <form class="contact-form" method="post" action="{{url_for('portfolio.mail')}}">
+                    <input name="name" placeholder="Name" required/>
+                    <input name="email" placeholder="Mail" required type="email" />
+                    <textarea name="message" placeholder="Message" required minlength="3"></textarea>
+                    <button class="btn">Send</button>            
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

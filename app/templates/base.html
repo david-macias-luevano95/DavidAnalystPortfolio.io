@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %} - Portfolio </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+
+<body>
+    <header>
+        <div class="logo">David Macias</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('portfolio.index') }}">Start</a></li>
+                <li><a href="#contacto">Contact</a></li>    
+            </ul>
+        </nav>
+    </header>
+    <selection>{% block content %}{% endblock %}</selection>
+    <div class="footer">
+        <div class="center full-width">
+            <div class="row" >
+                <h3> Contact  </h3>
+            </div>
+        </div> 
+        <div class="center full-width">
+            <div class="row" >
+                <p>Follow me on my social media</p>
+            </div>
+        </div>
+        <div class="center full-width social-links">
+            <div class="row">
+               
+                <a href="https://github.com/david-macias-luevano95"><img class="social" width="55`" src="{{url_for('static', filename='git_logo.png' )}}"></a>
+                <a href="https://www.linkedin.com/in/david-macias-luevano95/"><img class="social" width="40" src="{{url_for('static', filename='linkedin.png')}}"></a>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
